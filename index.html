@@ -77,18 +77,16 @@
 				<div id="unity-progress-bar-full"></div>
 			</div>
 
-			<script src="Build/{{ LOADER_FILENAME }}"></script>
+			<script src="Build/LandOfMightBuild-y8.loader.js"></script>
 			<script>
 				var loadingBar = document.querySelector("#unity-loading-bar");
 				var progressBarFull = document.querySelector("#unity-progress-bar-full");
 				var canvas = document.querySelector("#unity-canvas");
 				var logo = document.querySelector("#unity-logo");
 				var config = {
-					dataUrl: "Build/{{{ DATA_FILENAME }}}",
-					frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
-					codeUrl: "Build/{{{ CODE_FILENAME }}}",
-					memoryUrl: "Build/{{{ MEMORY_FILENAME }}}",
-					symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+					dataUrl: "Build/LandOfMightBuild-y8.data.unityweb",
+					frameworkUrl: "Build/LandOfMightBuild-y8.framework.js.unityweb",
+					codeUrl: "Build/LandOfMightBuild-y8.wasm.unityweb",
 					streamingAssetsUrl: "StreamingAssets",
 					companyName: "Noah Kurtz",
 					productName: "Land Of Might",
@@ -113,15 +111,15 @@
 						w = window.innerWidth;
 						h = window.innerHeight;
 
-						var r = { HEIGHT } / { WIDTH };
+						var r = 720 / 1280;
 
 						if (w * r > window.innerHeight) {
 							w = Math.min(w, Math.ceil(h / r));
 						}
 						h = Math.floor(w * r);
 					} else {
-						w = { WIDTH };
-						h = { HEIGHT };
+						w = 1280;
+						h = 720;
 					}
 
 					container.style.width = canvas.style.width = w + "px";
