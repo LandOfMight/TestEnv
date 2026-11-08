@@ -76,7 +76,7 @@
         myGameInstance = instance;
         canvas = instance.Module.canvas;
         fullscreenButton.onclick = () => {
-          unityInstance.SetFullscreen(1);
+          instance.SetFullscreen(1);
         };
         onResize();
       });
@@ -93,9 +93,9 @@
 
     </script>
     <script type="text/javascript" src="TemplateData/gameBreakBeta.js"></script>
-  </div>
-  <div id="unity-footer">
-    <div id="unity-fullscreen-button"></div>
+    <div id="unity-footer">
+      <div id="unity-fullscreen-button"></div>
+    </div>
   </div>
 </body>
 
