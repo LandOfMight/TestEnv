@@ -78,6 +78,9 @@
         loadingBar.style.display = 'none';
         myGameInstance = instance;
         canvas = instance.Module.canvas;
+        fullscreenButton.onclick = () => {
+          unityInstance.SetFullscreen(1);
+        };
         onResize();
       });
       window.addEventListener('resize', onResize);
@@ -90,22 +93,6 @@
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
       }
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
 
     </script>
     <script type="text/javascript" src="TemplateData/gameBreakBeta.js"></script>
