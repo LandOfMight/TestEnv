@@ -10,9 +10,6 @@
 
 <body>
   <div id="gameContainer">
-    <div id="unity-footer">
-      <div id="unity-fullscreen-button"></div>
-    </div>
     <canvas id="unity-canvas" data-pixel-art="{{OPTIMIZE_FOR_PIXEL_ART }}"></canvas>
     <div id="unity-loading-bar">
       <div id="unity-logo"></div>
@@ -73,7 +70,6 @@
         logo.style.left = Math.floor((w - 154) / 2) + "px"; // 154 is the width of the logo
         logo.style.top = Math.floor((h - 130) / 3) + "px";  // 130 is the height of the logo, divided by 3 for 33
       }
-
       var myGameInstance = null;
       createUnityInstance(canvas, config, progressHandler).then(function (instance) {
         loadingBar.style.display = 'none';
@@ -97,6 +93,9 @@
 
     </script>
     <script type="text/javascript" src="TemplateData/gameBreakBeta.js"></script>
+    <div id="unity-footer">
+      <div id="unity-fullscreen-button"></div>
+    </div>
   </div>
 </body>
 
