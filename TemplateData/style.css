@@ -8,9 +8,7 @@ body {
 }
 
 #unity-footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  position: relative;
 }
 
 .unity-mobile #unity-footer {
@@ -26,7 +24,7 @@ body {
 
 div#gameContainer {
   background: transparent !important;
-  position: absolute;
+  position: relative;
 }
 
 div#gameContainer canvas {
