@@ -28,11 +28,11 @@ div#gameContainer {
 }
 
 div#gameContainer canvas {
-  position: absolute;
+  position: relative;
 }
 
 div#gameContainer canvas[data-pixel-art="true"] {
-  position: absolute;
+  position: relative;
   image-rendering: optimizeSpeed;
   image-rendering: -webkit-crisp-edges;
   image-rendering: -moz-crisp-edges;
